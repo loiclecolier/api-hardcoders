@@ -2,6 +2,12 @@ import express from 'express'
 import { addRoom, getRooms, getRoom, updateRoom, deleteRoom } from '../controllers/roomControllers.js'
 // import { catchErrors } from '../helpers.js'
 
+// Path avec ES module
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 // création d'un router
 const router = express.Router()
 
@@ -12,11 +18,11 @@ const router = express.Router()
     // PATCH : modifier en remplaçant partiellement les données (update)
     // DELETE : supprimer des données (delete)
 
-router.post('/room', addRoom) // ou catchErrors(addRoom) pour gérer les erreurs avec le helper
-router.get('/rooms', getRooms)
-router.get('/room/:id', getRoom)
-router.patch('/room/:id', updateRoom)
-router.delete('/room/:id', deleteRoom)
+router.post('/api/room', addRoom) // ou catchErrors(addRoom) pour gérer les erreurs avec le helper
+router.get('/api/rooms', getRooms)
+router.get('/api/rooms/:id', getRoom)
+router.patch('/api/rooms/:id', updateRoom)
+router.delete('/api/rooms/:id', deleteRoom)
 
 // export du router
 export default router
