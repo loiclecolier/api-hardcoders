@@ -2,12 +2,6 @@ import express from 'express'
 import { addRoom, getRooms, getRoom, updateRoom, deleteRoom } from '../controllers/roomControllers.js'
 // import { catchErrors } from '../helpers.js'
 
-// Path avec ES module
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
 // création d'un router
 const router = express.Router()
 
