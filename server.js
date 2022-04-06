@@ -16,6 +16,9 @@ const app = express()
 // on dit à express qu'il y aura des données en JSON dans les requêtes
 app.use(express.json())
 
+// on dit à express d'utiliser les fichiers statiques générés avec React 
+app.use(express.static('client/build'))
+
 // initialisation mongoose
 mongoose.connect(process.env.MONGODB)
 

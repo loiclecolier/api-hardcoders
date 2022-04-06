@@ -1,2 +1,2 @@
 # Formation Hardcoders
-This API was made following the Hardcoders training (https://courses.hardcode.rs/)
+This fullstack project was made following the Hardcoders training (https://courses.hardcode.rs/)
