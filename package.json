@@ -1,10 +1,11 @@
 {
-  "name": "api-hardcoders",
+  "name": "formation-hardcoders",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Loïc Lécolier",
   "license": "ISC",
